@@ -1,7 +1,2 @@
-import"./assets/modulepreload-polyfill-B5Qt9EMX.js";import{a as c}from"./assets/vendor-DGDcxXwr.js";/* empty css                      */const s=document.querySelector(".todo-list");function i(e){return e.map(({title:o,completed:t})=>`
-    <li class="list-item">
-    <input type="checkbox" ${t&&"checked"}/>
-    <p>${o}</p>
-    </li>
-    `).join("")}c.get("https://jsonplaceholder.typicode.com/todos").then(e=>{console.log(e),s.insertAdjacentHTML("beforeend",i(data))}).catch(e=>{console.log(e.message)});
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";import{a as e}from"./assets/vendor-BOKJmoYz.js";/* empty css                      */document.querySelector(".todo-list");const t=(o="todos")=>e(`https://jsonplaceholder.typicode.com/${o}`);t().then(o=>{console.log(o.data)}).catch(o=>{console.log(o.message)});t("users").then(o=>{console.log(o.data)}).catch(o=>{console.log(o)});
 //# sourceMappingURL=01-axios.js.map
