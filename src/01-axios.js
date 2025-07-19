@@ -30,14 +30,14 @@ const list = document.querySelector(".todo-list");
 
 
 
-function createMarkup(arr) {
-    return arr.map(({title, completed}) => `
-    <li class="list-item">
-    <input type="checkbox" ${completed && "checked"}/>
-    <p>${title}</p>
-    </li>
-    `).join("");
-}
+// function createMarkup(arr) {
+//     return arr.map(({title, completed}) => `
+//     <li class="list-item">
+//     <input type="checkbox" ${completed && "checked"}/>
+//     <p>${title}</p>
+//     </li>
+//     `).join("");
+// }
 
 // axios("https://jsonplaceholder.typicode.com/todos")
 // .then(res => {
@@ -48,11 +48,37 @@ function createMarkup(arr) {
 //     console.log(error.message);
 // })
 
-axios.get("https://jsonplaceholder.typicode.com/todos")
+// axios.get("https://jsonplaceholder.typicode.com/todos")
+// .then(res => {
+//         console.log(res);
+//         list.insertAdjacentHTML("beforeend", createMarkup(res.data));
+//     })
+//     .catch(error => {
+//         console.log(error.message)
+//     });
+
+
+// - b 
+// Всередині функції запит,
+// зовні обробка
+
+const fetchData = (endpoint = "todos") => {
+    return axios(`https://jsonplaceholder.typicode.com/${endpoint}`)
+}
+
+fetchData()
 .then(res => {
-        console.log(res);
-        list.insertAdjacentHTML("beforeend", createMarkup(data));
-    })
-    .catch(error => {
-        console.log(error.message)
-    });
+    console.log(res.data);
+})
+
+.catch(error => {
+    console.log(error.message);
+})
+
+fetchData("users")
+ .then(res => {
+    console.log(res.data);
+ })
+ .catch(error => {
+    console.log(error);
+ })

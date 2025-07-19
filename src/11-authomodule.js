@@ -42,8 +42,8 @@ function createMarkup(arr) {
 }
 
 
-fetch(`https://pixabay.com/api?${params}`, {
-    headers: {
-        Authorization: `Bearer lalala`
-    }
-}) 
+// fetch(`https://pixabay.com/api?${params}`, {
+//     headers: {
+//         Authorization: `Bearer lalala`,
+//     }
+// }) 
