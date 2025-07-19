@@ -54,4 +54,5 @@ axios.get("https://jsonplaceholder.typicode.com/todos")
         list.insertAdjacentHTML("beforeend", createMarkup(data));
     })
     .catch(error => {
-        console.log(error.message);
+        console.log(error.message)
+    });
