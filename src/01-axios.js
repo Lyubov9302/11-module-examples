@@ -1,5 +1,5 @@
 import axios from "axios";
-import '../common.css';
+import './css/styles.css';
 
 // Додаємо та використовуємо бібліотеку https://axios-http.com/
 // Робимо рефакторинг
